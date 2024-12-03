@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="advanced_style.css">
+    <script src="script.js"></script>
     <title>Advanced</title>
 </head>
 
@@ -24,46 +25,38 @@
         <h1>Advanced</h1>
         <div class="table-card">
             <div class="table-header">Display</div>
-            <table border="1px">
-                <tr>
-                    <td><b>Name</b></td>
-                    <td>John</td>
-                    <td>Mary</td>
-                    <td>July</td>
-                </tr>
-                <tr>
-                    <td><b>Gender</b></td>
-                    <td>Male</td>
-                    <td>Female</td>
-                    <td>Female</td>
-                </tr>
-                <tr>
-                    <td><b>DOB</b></td>
-                    <td>01/02/1988</td>
-                    <td>01/06/1988</td>
-                    <td>17/12/1991</td>
-                </tr>
-                <tr>
-                    <td><b>Email</b></td>
-                    <td>john@example.com</td>
-                    <td>mary@example.com</td>
-                    <td>july@example.com</td>
-                </tr>
-                <tr>
-                    <td><b>Phone</b></td>
-                    <td>9898767514</td>
-                    <td>9977541236</td>
-                    <td>9898898954</td>
-                </tr>
-                <tr>
-                    <td><b>Hobbies</b></td>
-                    <td>Cricket</td>
-                    <td>Cricket, Chess</td>
-                    <td>Cricket, Chess, Music</td>
-                </tr>
-            </table>
+            <div class="table-content">
+                <div class="row-name">
+                    <table border="1px">
+                        <tr>
+                            <td><b>Name</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Gender</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>DOB</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Email</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Phone</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>Hobbies</b></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row-data">
+                    <table border="1px" id="advancedTable"> </table>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        displayEmployeesAdvanced();
+    </script>
 </body>
 
 </html>

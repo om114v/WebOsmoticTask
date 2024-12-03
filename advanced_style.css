@@ -128,6 +128,12 @@ h1 {
     text-align: left;
 }
 
+.table-content {
+    display: flex;
+    gap: 10px;
+    /* Space between the two divs */
+}
+
 /* Table styles */
 table {
     width: 99%;
