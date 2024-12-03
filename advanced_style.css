@@ -134,6 +134,7 @@ h1 {
 
 .row-data {
     overflow-x: scroll;
+    width: 100%;
 }
 
 /* Table styles */
