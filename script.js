@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     // Configuration object for form validation
     const VALIDATION_CONFIG = {
         name: {
@@ -281,4 +281,4 @@
     } else {
         init();
     }
-})();
+// })();
