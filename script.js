@@ -60,8 +60,77 @@ document.getElementById("employeeForm").addEventListener("submit", function (eve
         phoneError.textContent = "";
     }
 
+    // Get form values
+    const name = document.getElementById('name').value;
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    const dob = document.getElementById('dob').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const hobbies = document.getElementById('hobbies').value;
+
+    // Create a new employee object
+    const newEmployee = { name, gender, dob, email, phone, hobbies };
+
+    // Save the new employee to local storage
+    const employees = getEmployees();
+    employees.push(newEmployee);
+    saveEmployees(employees);
+
+    // Display the updated list
+    displayEmployees();
+
     // Final validation
     if (isValid) {
         alert("Form submitted successfully!");
     }
+
+    // Reset the form
+    document.getElementById('employeeForm').reset();
 });
+
+// Function to get employees from local storage
+function getEmployees() {
+    const employees = localStorage.getItem('employees');
+    return employees ? JSON.parse(employees) : [];
+}
+
+// Function to save employees to local storage
+function saveEmployees(employees) {
+    localStorage.setItem('employees', JSON.stringify(employees));
+}
+
+// Function to display employees in the table
+function displayEmployees() {
+    const employees = getEmployees();
+    const tableBody = document.getElementById('basic-employee').getElementsByTagName('tbody')[0];
+
+    // Clear the current rows in the table
+    tableBody.innerHTML = '';
+
+    // Loop through each employee and create a new row
+    employees.forEach((employee, index) => {
+        const row = tableBody.insertRow();  // Create a new row
+
+        // Insert the employee data into the row
+        row.innerHTML = `
+            <td>${employee.name}</td>
+            <td>${employee.gender}</td>
+            <td>${employee.dob}</td>
+            <td>${employee.email}</td>
+            <td>${employee.phone}</td>
+            <td>${employee.hobbies}</td>
+            <td><button onclick="deleteEmployee(${index})">Delete</button></td>
+        `;
+    });
+}
+
+// Function to delete an employee
+function deleteEmployee(index) {
+    const employees = getEmployees();
+    employees.splice(index, 1);  // Remove employee at index
+    saveEmployees(employees);    // Save updated employee list to local storage
+    displayEmployees();          // Re-display the updated table
+}
+
+// Display employees on page load
+document.addEventListener('DOMContentLoaded', displayEmployees);
