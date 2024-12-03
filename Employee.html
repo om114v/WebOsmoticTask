@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Employee_styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><a style="
+            text-decoration: none;
+            color: white;
+        " href="Employee.html">My task</a></div>
+        <ul class="nav-links">
+            <li><a href="Employee.html">Employee</a></li>
+            <li><a href="Basic.html">Basic</a></li>
+            <li><a href="Advanced.html">Advanced</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Employee</h1>
+        <div class="form-card">
+            <div class="form-header">Add Employee</div>
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter name" required>
+                    <small class="error-message" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="form-as">
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <small class="error-message" id="dobError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone">
+                    <small class="error-message" id="phoneError"></small>
+                </div>
+
+                <div class="form-group" style="align-items: flex-start;">
+                    <label>Hobbies:</label>
+                    <div class="form-iop">
+                        <div class="form-as">
+                            <input type="checkbox" id="cricket" name="hobbies" value="cricket">
+                            <label for="cricket">Cricket</label>
+                        </div>
+                        <div class="form-as">
+
+                            <input type="checkbox" id="chess" name="hobbies" value="chess">
+                            <label for="chess">Chess</label>
+                        </div>
+                        <div class="form-as">
+
+                            <input type="checkbox" id="music" name="hobbies" value="music">
+                            <label for="music">Music</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

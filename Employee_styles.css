@@ -1,0 +1,223 @@
+/* Reset some default styles */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Nav links container */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for individual links */
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+/* Add a hamburger menu for mobile */
+.navbar .toggle {
+    display: none;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Card layout */
+.form-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.form-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Form styles */
+form {
+    padding: 15px;
+}
+
+.form-group {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+label {
+    font-weight: bold;
+    flex: 0 0 10%;
+    margin-right: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus {
+    border-color: #007bff;
+}
+
+/* Inline layout for radio and checkboxes */
+.form-inline {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-iop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button styles */
+.btn-submit {
+    display: block;
+    margin-left: 170px;
+    width: 10%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        flex: none;
+        margin-bottom: 5px;
+    }
+
+    .form-inline {
+        flex-wrap: wrap;
+    }
+}

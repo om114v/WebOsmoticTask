@@ -1,0 +1,166 @@
+/* Reset some default styles */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General styling for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Nav links container */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling for individual links */
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+/* Add a hamburger menu for mobile */
+.navbar .toggle {
+    display: none;
+}
+
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Table card styling */
+.table-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.table-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Table styles */
+table {
+    width: 99%;
+    border-collapse: collapse;
+    margin: 8px;
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+thead th {
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    td,
+    th {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
