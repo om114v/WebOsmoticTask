@@ -130,8 +130,10 @@ h1 {
 
 .table-content {
     display: flex;
-    gap: 10px;
-    /* Space between the two divs */
+}
+
+.row-data {
+    overflow-x: scroll;
 }
 
 /* Table styles */
